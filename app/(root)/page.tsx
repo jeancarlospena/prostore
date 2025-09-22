@@ -4,7 +4,7 @@ import { Product } from "@/types";
 
 const HomePage = async () => {
   const rawProducts = await getLatestProducts();
-  const latestProducts: Product[] = rawProducts.map((product: any) => ({
+  const latestProducts: Product[] = rawProducts.map((product: Product) => ({
     ...product,
     price: product.price.toString(),
   }));

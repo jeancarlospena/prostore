@@ -1,5 +1,4 @@
-import { Description } from '@radix-ui/react-dialog'
-import {number, z} from 'zod'
+import { z} from 'zod'
 import { formatNumberWithDecimal } from './utils'
 
 const currency = z
