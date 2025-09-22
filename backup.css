@@ -1,0 +1,64 @@
+@layer utilities {
+  .wrapper {
+    max-width: 80rem; /* max-w-7xl */
+    margin-left: auto; /* lg:mx-auto */
+    margin-right: auto; /* lg:mx-auto */
+    padding: 1.25rem; /* p-5 */
+    padding-left: 2.5rem; /* md:px-10 */
+    padding-right: 2.5rem; /* md:px-10 */
+    width: 100%; /* w-full */
+  }
+
+  .flex-start {
+    display: flex; /* flex */
+    justify-content: flex-start; /* justify-start */
+    align-items: center; /* items-center */
+  }
+  .flex-center {
+    display: flex; /* flex */
+    justify-content: center; /* justify-center */
+    align-items: center; /* items-center */
+  }
+
+  .flex-between {
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+  }
+
+  .h1-bold {
+    font-weight: bold; /* font-bold */
+    font-size: 1.875rem; /* text-3xl */
+    line-height: 2.25rem; /* text-3xl */
+  }
+  @media (min-width: 1024px) {
+    .h1-bold {
+      font-size: 2.25rem; /* lg:text-4xl */
+      line-height: 2.5rem; /* lg:text-4xl */
+    }
+  }
+
+  .h2-bold {
+    font-weight: bold; /* font-bold */
+    font-size: 1.5rem; /* text-2xl */
+    line-height: 2rem; /* text-2xl */
+  }
+  @media (min-width: 1024px) {
+    .h2-bold {
+      font-size: 1.875rem; /* lg:text-3xl */
+      line-height: 2.25rem; /* lg:text-3xl */
+    }
+  }
+
+  .h3-bold {
+    font-weight: bold; /* font-bold */
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.75rem; /* text-xl */
+  }
+  @media (min-width: 1024px) {
+    .h3-bold {
+      font-size: 1.5rem; /* lg:text-2xl */
+      line-height: 2rem; /* lg:text-2xl */
+    }
+  }
+}
