@@ -58,8 +58,13 @@ export const config = {
         session.user.name = user.name
       }
       return session
-    }
-      
+    },
+    // async jwt({token, user, trigger, session}: any) {
+    //   // assign user fields to token
+    //   if(user) {
+    //     token.role = user.role;
+    //   }
+    //  }
   }
 } satisfies NextAuthConfig
 

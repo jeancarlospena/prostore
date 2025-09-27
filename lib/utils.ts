@@ -18,8 +18,9 @@ export function formatNumberWithDecimal(num: number):string{
 }
 
 // format errors
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export function formatError(error: any) {
+/* eslint-enable @typescript-eslint/no-explicit-any */
   if(error.name === 'ZodError'){
     //  handle zod errors
     const parsedError = JSON.parse(error)
