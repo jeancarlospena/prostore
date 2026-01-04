@@ -17,7 +17,7 @@ const AdminSearch = () => {
 
   useEffect(() => {
     setQueryValue(searchParams.get("query") || "");
-  }, []);
+  }, [searchParams]);
   return (
     <form action={formActionUrl} method="GET">
       <Input

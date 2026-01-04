@@ -3,7 +3,7 @@ import { prisma } from "@/db/prisma";
 // import { PrismaClient } from "../generated/prisma";
 import { convertToPlainObject, formatError } from "../utils";
 import { LATEST_PRODUCTS_LIMIT, PAGE_SIZE } from "../constants";
-import z, { success } from "zod";
+import z from "zod";
 import { revalidatePath } from "next/cache";
 import { insertProductSchema, updateProductSchema } from "../validators";
 import { Prisma } from "@prisma/client";
