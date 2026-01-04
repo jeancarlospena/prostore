@@ -136,3 +136,8 @@ model OrderItem {
 
   @@id([orderId, productId], map: "orderitems_orderId_productId_pk")
 }
+
+model Review {
+  id     String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId String @db.Uuid
+}
