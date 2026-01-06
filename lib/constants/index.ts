@@ -16,20 +16,20 @@ export const signUpDefaultValues = {
   confirmPassword: '123456'
 }
 
-export const shippingAddressDefaultValues = {
-  fullName: "",
-  streetAddress: '',
-  city: '',
-  postalCode: '',
-  country: ""
-}
 // export const shippingAddressDefaultValues = {
-//   fullName: "Carlos Pena",
-//   streetAddress: '123 Main st',
-//   city: 'Anytown',
-//   postalCode: '12345',
-//   country: "USA"
+//   fullName: "",
+//   streetAddress: '',
+//   city: '',
+//   postalCode: '',
+//   country: ""
 // }
+export const shippingAddressDefaultValues = {
+  fullName: "Carlos Pena",
+  streetAddress: '123 Main st',
+  city: 'Anytown',
+  postalCode: '12345',
+  country: "USA"
+}
 
 export const PAYMENT_METHODS = process.env.PEYMENT_METHODS ? process.env.PAYMENT_METHODS?.split(', ') : ['PayPal', 'Stripe', 'CashOnDelivery']
 export const DEFAULT_PAYMENT_METHOD = process.env.DEFAULT_PAYMENT_METHOD || 'PayPal'
@@ -58,3 +58,5 @@ export const reviewFormDefaultValues = {
   comment: '',
   rating: 0
 }
+
+export const SENDER_EMAIL = process.env.SENDER_EMAIL || 'onboarding@resend.dev'

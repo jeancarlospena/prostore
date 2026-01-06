@@ -7,11 +7,12 @@ import { getMyCart } from "./cart.action";
 import { getUserById } from "./user.actions";
 import { insertOrderSchema } from "../validators";
 import { prisma } from "@/db/prisma";
-import { CartItem, PaymentResult } from "@/types";
+import { CartItem, PaymentResult, ShippingAddress } from "@/types";
 import { paypal } from "../paypal";
 import { revalidatePath } from "next/cache";
 import { PAGE_SIZE } from "../constants";
 import { Prisma } from "@prisma/client";
+import { sendPurchasedReceipt } from "@/email";
 
 // create order adn create teh orshipping
 export async function createOrder () {
@@ -222,6 +223,11 @@ export async function updateOrderToPaid({
   })
 
   if(!updatedOrder) throw new Error('Order not found')
+
+  sendPurchasedReceipt({order: {...updatedOrder,
+    shippingAddress: updatedOrder.shippingAddress as ShippingAddress,
+    paymentResult: updatedOrder.paymentResult as PaymentResult
+  }})
 }
 
 // get users orders
